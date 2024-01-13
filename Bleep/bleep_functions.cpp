@@ -1,22 +1,37 @@
-#include <iostream> 
-#include <string> 
-#include "bleep_functions.hpp"
+#include <string>
 
-using namespace std;
+void asterisk(std::string word, std::string &text, int i) {
+  
+  for (int k = 0; k < word.size(); ++k) {
+  
+    text[i+k] = '*';
+      
+  }
+  
+}
 
-void bleep(string bleep_word, string &good_text){
-
-
-
-    for(int i = 0; i < good_text.length(); i++){
-       // if(good_text.find(bleep_word)){
-        //    good_text.replace();
-        //}
-        //need to find a way for the code to continue and not just stop 
-        
-        
-
-    }
+void bleep(std::string word, std::string &text) {
     
-
+  for (int i = 0; i < text.size(); ++i) {
+        
+    int match = 0;
+        
+    for (int j = 0; j < word.size(); ++j) {
+    
+      if (text[i+j] == word[j]) {
+        
+        ++match;
+          
+      }
+    
+    }
+        
+    if (match == word.size()) {
+            
+      asterisk(word, text, i);
+        
+    }
+      
+  }
+    
 }

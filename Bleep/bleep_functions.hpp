@@ -1,3 +1,2 @@
-#include <iostream>
-
-void bleep(string bleep_word, string &good_text);
+void bleep(std::string word, std::string &text);
+void asterisk(std::string word, std::string &text, int i);
