@@ -11,8 +11,8 @@ int main(){
     string text = "I just ate some broccoli and it was delicious. I wish I always had broccocli for dinner. But sometimes broccoli gives me the squirts";
 
 
-    bleep(word, text);
+    //bleep(word, text);
 
-    cout << text; 
+    //cout << text; 
 
 }
